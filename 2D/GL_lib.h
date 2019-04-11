@@ -175,6 +175,49 @@ void align(point &left, point &right)
     }
 }
 
+void drawCircle(int R)
+{
+    glBegin(GL_POINTS);
+    int x = 0;
+    int y = R;
+
+    int h = 1 - R;
+    int dE = 3;
+    int dSE = (-2 * R) + 5;
+
+    while (x < y)
+    {
+
+
+        if(h < 0)
+        {
+            h+=dE;
+            dE+=2;
+            dSE+=2;
+        }
+
+        else
+        {
+            h+=dSE;
+            dE+=2;
+            dSE+=4;
+            y--;
+        }
+        x++;
+        glVertex2i(x, y);
+        glVertex2i(y, x);
+        glVertex2i(x, -y);
+        glVertex2i(-y, x);
+        glVertex2i(-x, y);
+        glVertex2i(y, -x);
+        glVertex2i(-x, -y);
+        glVertex2i(-y, -x);
+    }
+    glEnd();
+
+
+}
+
 void draw_ellipse(int x, int y, int coordx, int coordy){
     glBegin(GL_POINTS);
     glVertex2i(x+coordx, y+coordy);
