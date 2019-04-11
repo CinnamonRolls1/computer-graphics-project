@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 
-
 struct point
 {
     int x;
