@@ -175,7 +175,7 @@ void align(point &left, point &right)
     }
 }
 
-void drawCircle(int R)
+void drawCircle(int R, int a, int b)
 {
     glBegin(GL_POINTS);
     int x = 0;
@@ -204,14 +204,14 @@ void drawCircle(int R)
             y--;
         }
         x++;
-        glVertex2i(x, y);
-        glVertex2i(y, x);
-        glVertex2i(x, -y);
-        glVertex2i(-y, x);
-        glVertex2i(-x, y);
-        glVertex2i(y, -x);
-        glVertex2i(-x, -y);
-        glVertex2i(-y, -x);
+        glVertex2i(a+x, b+y);
+        glVertex2i(a+y, b+x);
+        glVertex2i(a+x, b-y);
+        glVertex2i(a-y, b+x);
+        glVertex2i(a-x, b+y);
+        glVertex2i(a+y, b-x);
+        glVertex2i(a-x, b-y);
+        glVertex2i(a-y, b-x);
     }
     glEnd();
 
