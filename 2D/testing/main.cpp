@@ -4,6 +4,8 @@
 #include <GL/gl.h>
 #include <GL/glut.h>
 #include <iostream>
+#include <math.h>
+#include <limits>
 
 using namespace std;
 
@@ -18,7 +20,7 @@ void display()
 
 
     glClear(GL_COLOR_BUFFER_BIT);
-    //Call library function here
+    drawArc(200,0,45);
 
 
     glFlush();
@@ -44,7 +46,7 @@ int main(int argc, char * argv[])
     glutInitWindowSize(500,500);
 
     init();
-    glutReshapeFunc(glutReshapeWindow);
+    //glutReshapeFunc(glutReshapeWindow);
     glutDisplayFunc(display);
     glutMainLoop();
 
