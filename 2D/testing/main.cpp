@@ -44,6 +44,7 @@ int main(int argc, char * argv[])
     glutInitWindowSize(500,500);
 
     init();
+    glutReshapeFunc(glutReshapeWindow);
     glutDisplayFunc(display);
     glutMainLoop();
 
