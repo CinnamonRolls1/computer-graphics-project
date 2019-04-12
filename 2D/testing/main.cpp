@@ -20,7 +20,7 @@ void display()
 
 
     glClear(GL_COLOR_BUFFER_BIT);
-    drawArc(200,0,45);
+    //drawArc(200,0,45);
 
 
     glFlush();
